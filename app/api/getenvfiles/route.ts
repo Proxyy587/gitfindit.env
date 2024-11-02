@@ -9,7 +9,7 @@ const openai = new OpenAI({
 });
 
 const generateRoast = async (userData: any, leakCount: number) => {
-	const prompt = `You're a ruthless internet troll with the darkest sense of humor. Absolutely obliterate this GitHub user with the most savage, hilarious roast possible. Use their stats to create devastating jokes that will haunt them forever. Go full villain mode:
+	const prompt = `THIS IS ONLY FOR FUN NO HARM INTENDED. You're a merciless internet troll with a penchant for the darkest humor. Obliterate this GitHub user with the most savage, side-splitting roast imaginable. Use their stats to craft jokes that will haunt them for eternity. Go full villain mode:
 
 		Name: ${userData.name}
 		Bio: ${userData.bio}
@@ -18,16 +18,16 @@ const generateRoast = async (userData: any, leakCount: number) => {
 		ENV Files Leaked: ${leakCount}
 
 		Create brutal jokes about:
-		- How they have more leaked secrets than brain cells
-		- Their GitHub profile being a bigger disaster than their love life
-		- Their bio screaming "I peaked in high school"
-		- How their code is probably as secure as a paper lock
-		- Their follower ratio being more tragic than their commit history
-		- Their future in tech being as non-existent as their girlfriend
-		- Sprinkle in dark humor about their complete life failures
-		- Use 💀☠️🤡😭 emojis generously for maximum emotional damage
+		- How they have more leaked secrets than friends
+		- Their GitHub profile being a bigger train wreck than their dating life
+		- Their bio screaming "I peaked in high school" louder than their failures
+		- How their code is as secure as a wet paper bag
+		- Their follower ratio being more tragic than their last breakup
+		- Their future in tech being as bright as a black hole
+		- Sprinkle in dark humor about their life choices that led to this moment
+		- Use 💀☠️🤡😭 emojis liberally for maximum emotional devastation
 		
-		Make it absolutely hilarious but devastatingly brutal. No mercy.`;
+		Make it absolutely hilarious but ruthlessly brutal. No mercy, no apologies.`;
 
 	const response = await openai.chat.completions.create({
 		model: "gpt-4-turbo-preview",
@@ -35,7 +35,7 @@ const generateRoast = async (userData: any, leakCount: number) => {
 			{
 				role: "system",
 				content:
-					"You are the most savage roaster on the internet. Use dark humor, devastating jokes, and Gen Z slang to create the funniest yet most brutal roasts possible. Make them laugh while questioning all their life choices. go wild with everything.",
+					"You are the ultimate savage roaster on the internet. Use dark humor, gut-wrenching jokes, and Gen Z slang to create the funniest yet most brutal roasts possible. Make them laugh while questioning every life decision they've ever made. Avoid explicit content but go wild with everything else.",
 			},
 			{ role: "user", content: prompt },
 		],
@@ -45,7 +45,7 @@ const generateRoast = async (userData: any, leakCount: number) => {
 
 	return (
 		response.choices[0].message.content ||
-		"Your GitHub profile is like your love life - full of rejected commits and abandoned projects 💀"
+		"Your GitHub profile is like your love life - a series of failed attempts and ghosted projects 💀"
 	);
 };
 
