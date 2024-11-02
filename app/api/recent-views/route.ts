@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { User } from "@/lib/user.model";
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
 	try {
 		const recentViews = await User.find()
