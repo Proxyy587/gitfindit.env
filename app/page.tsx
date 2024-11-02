@@ -39,14 +39,14 @@ export default function Home() {
 			<div className="z-10 w-full max-w-3xl font-mono text-sm flex flex-col items-center justify-center bg-zinc-900 rounded-xl p-12 shadow-2xl border border-zinc-800 hover:border-zinc-700 transition-all duration-300">
 				<Link
 					href="/hall-of-shame"
-					className="mb-12 px-8 py-4 bg-red-600/20 border-2 border-red-500 rounded-lg hover:bg-red-500/30 transition-all duration-300"
+					className="mb-12 px-8 py-4 bg-red-600/20 border-2 border-red-500 rounded-lg hover:bg-red-500/20 transition-all duration-300"
 				>
 					<div className="text-center">
 						<span className="text-2xl font-bold text-red-500">
 							🏆 HALL OF SHAME 🏆
 						</span>
 						<p className="mt-2 text-red-400 text-sm">
-							Meet the daily vloggers, privacy ki mkc
+							Meet the daily vloggers where privacy ki mkc
 						</p>
 					</div>
 				</Link>
@@ -71,8 +71,8 @@ export default function Home() {
 					</button>
 				</div>
 				<p className="mt-6 text-center text-zinc-500 text-xs max-w-xl hover:text-zinc-300 transition-all duration-300">
-					Check how many API keys you&apos;ve leaked, you absolute fucking moron. Bet
-					you pushed to main branch too, didn&apos;t you? 💀
+					Check how many API keys you&apos;ve leaked, you absolute fucking
+					moron. Bet you pushed to main branch too, didn&apos;t you? 💀
 				</p>
 			</div>
 			<RecentViews />

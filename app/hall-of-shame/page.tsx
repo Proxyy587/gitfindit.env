@@ -36,6 +36,17 @@ export default function HallOfShame() {
 		fetchData();
 	}, []);
 
+	if (loading) {
+		return (
+			<main className="flex min-h-screen flex-col items-center justify-center p-12 font-mono">
+				<div className="flex flex-col items-center gap-4">
+					<div className="w-16 h-16 border-4 border-red-500 border-t-transparent rounded-full animate-spin"></div>
+					<p className="text-zinc-400">Loading Hall of Shame...</p>
+				</div>
+			</main>
+		);
+	}
+
 	return (
 		<main className="flex min-h-screen flex-col items-center p-12 font-mono">
 			<div className="w-full max-w-3xl flex flex-col items-center gap-8">
