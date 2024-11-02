@@ -27,7 +27,7 @@ const generateRoast = async (userData: any, leakCount: number) => {
 		- Sprinkle in dark humor about their life choices that led to this moment
 		- Use 💀☠️🤡😭 emojis liberally for maximum emotional devastation
 		
-		Make it absolutely hilarious but ruthlessly brutal. No mercy, no apologies.`;
+		Make it absolutely hilarious but ruthlessly brutal. No mercy, no apologies. 18+ jokes allowed and keep everything under 100 words`;
 
 	const response = await openai.chat.completions.create({
 		model: "gpt-4o-mini",
@@ -40,7 +40,7 @@ const generateRoast = async (userData: any, leakCount: number) => {
 			{ role: "user", content: prompt },
 		],
 		temperature: 1.0,
-		max_tokens: 350,
+		max_tokens: 250,
 	});
 
 	return (
