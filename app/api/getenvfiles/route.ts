@@ -10,11 +10,11 @@ const generateRoast = async (userData: any, leakCount: number) => {
 	const prompt = `Generate a brutal, funny roast for a GitHub user with the following stats:
 		Name: ${userData.name}
 		Bio: ${userData.bio}
-		Followers: ${userData.followers}
-		Following: ${userData.following}
-		Leaked ENV Files: ${leakCount}
+		His followers clown: ${userData.followers}
+		He follows too many people: ${userData.following}
+		Leaked ENV Files Count: ${leakCount}
 		
-		Make it extremely savage but funny, focusing on their security mistakes and GitHub stats. Keep it under 100 words.`;
+		Make sure to roast him in brutal and funny way you can use cuss words but make sure its brutal focus on his insecurities like following follower ratio + github leaks and everything else to make it more funny and savage keep everything under 100 words make it savage sarcastic brutal reply`;
 
 	const response = await openai.chat.completions.create({
 		model: "gpt-4",
