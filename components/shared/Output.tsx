@@ -109,7 +109,7 @@ export default function Output({ data, roast }: OutputProps) {
 						<span className="text-4xl">🤡</span>
 						<h2 className="text-xl font-bold text-red-500">{error}</h2>
 						<p className="text-zinc-400 text-center">
-							Can't even provide a valid username? Peak clownery right here 🎪
+							Can&apos;t even provide a valid username? Peak clownery right here 🎪
 						</p>
 					</div>
 				</div>

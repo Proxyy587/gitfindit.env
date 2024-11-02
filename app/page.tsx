@@ -51,7 +51,7 @@ export default function Home() {
 					</div>
 				</Link>
 				<h1 className="text-3xl font-bold mb-8 text-emerald-400">
-					All the API keys you've leaked
+					All the API keys you&apos;ve leaked
 				</h1>
 				<div className="relative w-full max-w-md">
 					<input
@@ -71,8 +71,8 @@ export default function Home() {
 					</button>
 				</div>
 				<p className="mt-6 text-center text-zinc-500 text-xs max-w-xl hover:text-zinc-300 transition-all duration-300">
-					Check how many API keys you've leaked, you absolute fucking moron. Bet
-					you pushed to main branch too, didn't you? 💀
+					Check how many API keys you&apos;ve leaked, you absolute fucking moron. Bet
+					you pushed to main branch too, didn&apos;t you? 💀
 				</p>
 			</div>
 			<RecentViews />

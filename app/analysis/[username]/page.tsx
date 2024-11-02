@@ -68,7 +68,7 @@ export default function AnalysisPage() {
 
 				if (error.response?.status === 404) {
 					toast.error(
-						"User not found. Are you sure that's a real GitHub user? 🤔"
+						"User not found. Are you sure that&apos;s a real GitHub user? 🤔"
 					);
 					router.push("/");
 					return;
@@ -113,7 +113,7 @@ export default function AnalysisPage() {
 					</p>
 					<p className="text-sm text-zinc-500 mt-2">
 						This might take a moment, just like how long it took you to realize
-						.env shouldn't be public
+						.env shouldn&apos;t be public
 					</p>
 				</div>
 				<div className="flex gap-4">
