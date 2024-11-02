@@ -9,24 +9,43 @@ const openai = new OpenAI({
 });
 
 const generateRoast = async (userData: any, leakCount: number) => {
-	const prompt = `Generate a brutal, funny roast for a GitHub user with the following stats:
+	const prompt = `You're a ruthless internet troll with the darkest sense of humor. Absolutely obliterate this GitHub user with the most savage, hilarious roast possible. Use their stats to create devastating jokes that will haunt them forever. Go full villain mode:
+
 		Name: ${userData.name}
 		Bio: ${userData.bio}
-		His followers clown: ${userData.followers}
-		He follows too many people: ${userData.following}
-		Leaked ENV Files Count: ${leakCount}
+		Followers: ${userData.followers} 
+		Following: ${userData.following}
+		ENV Files Leaked: ${leakCount}
+
+		Create brutal jokes about:
+		- How they have more leaked secrets than brain cells
+		- Their GitHub profile being a bigger disaster than their love life
+		- Their bio screaming "I peaked in high school"
+		- How their code is probably as secure as a paper lock
+		- Their follower ratio being more tragic than their commit history
+		- Their future in tech being as non-existent as their girlfriend
+		- Sprinkle in dark humor about their complete life failures
+		- Use 💀☠️🤡😭 emojis generously for maximum emotional damage
 		
-		Make sure to roast him in brutal and funny way you can use cuss words but make sure its brutal focus on his insecurities like following follower ratio + github leaks and everything else to make it more funny and savage keep everything under 100 words make it savage sarcastic brutal reply`;
+		Make it absolutely hilarious but devastatingly brutal. No mercy.`;
 
 	const response = await openai.chat.completions.create({
-		model: "gpt-4",
-		messages: [{ role: "user", content: prompt }],
-		temperature: 0.8,
+		model: "gpt-4-turbo-preview",
+		messages: [
+			{
+				role: "system",
+				content:
+					"You are the most savage roaster on the internet. Use dark humor, devastating jokes, and Gen Z slang to create the funniest yet most brutal roasts possible. Make them laugh while questioning all their life choices. go wild with everything.",
+			},
+			{ role: "user", content: prompt },
+		],
+		temperature: 1.0,
+		max_tokens: 350,
 	});
 
 	return (
 		response.choices[0].message.content ||
-		"You're so basic, even your security flaws are uninteresting. 🥱"
+		"Your GitHub profile is like your love life - full of rejected commits and abandoned projects 💀"
 	);
 };
 
