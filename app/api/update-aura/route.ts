@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { saveUser } from "@/actions/saveUser";
 
 export const dynamic = 'force-dynamic';
-export const runtime = 'edge';
 
 export async function POST(req: NextRequest) {
 	try {
