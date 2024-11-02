@@ -27,7 +27,7 @@ export default function Header() {
 							Hall of Shame
 						</Link>
 						<a
-							href="https://github.com"
+							href="https://github.com/Proxyy587/gitfindit.env"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="p-2.5 text-sm rounded-full bg-zinc-800/80 text-zinc-300 hover:bg-zinc-700/80 transition-all duration-300 border border-zinc-700/50 hover:border-zinc-600 hover:scale-105 hover:shadow-lg hover:shadow-zinc-900/20"

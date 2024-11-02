@@ -53,12 +53,10 @@ export default function AnalysisPage() {
 				}
 
 				if (res.data.data.total_count > 0) {
-					toast.success(
-						"LMAO found all your leaked secrets you absolute clown! 🤡"
-					);
+					toast.success("Lmao Got the data you absolute piece of lawra! 🤡");
 				} else {
 					toast.info(
-						"No leaks? What are you, some kind of responsible developer? Get outta here! 🤮"
+						"No leaks? What are you, some kind of responsible developer? Get tf outta here! 🤮"
 					);
 				}
 			} catch (error: any) {
@@ -162,7 +160,7 @@ export default function AnalysisPage() {
 	}
 
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-center p-24 bg-black">
+		<main className="flex min-h-screen flex-col items-center justify-center p-6 bg-black">
 			<div className="z-10 w-full max-w-2xl">
 				<Output data={data.data} roast={data.roast} />
 			</div>

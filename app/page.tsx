@@ -5,7 +5,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import Output from "@/components/shared/Output";
 import { GitHubResponse } from "@/types";
 import RecentViews from "@/components/shared/RecentViews";
 

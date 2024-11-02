@@ -10,6 +10,9 @@ export const metadata: Metadata = {
 	title: ".env - Save yourself from getting clowned",
 	description:
 		"Find out how many API keys you've leaked on GitHub. Reason why you never got job and girlfriend! 💀",
+	icons: {
+		icon: "/logo.svg",
+	},
 };
 
 export default function RootLayout({

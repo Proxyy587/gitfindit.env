@@ -3,7 +3,7 @@ import { saveUser } from "@/actions/saveUser";
 
 export const POST = async (req: NextRequest) => {
 	try {
-		const { username, leakCount } = await req.json();
+		const { username, leakCount, auraPoints } = await req.json();
 
 		if (!username) {
 			return NextResponse.json(
@@ -15,6 +15,7 @@ export const POST = async (req: NextRequest) => {
 		const userData = {
 			username,
 			leakedCount: leakCount,
+			auraPoints: auraPoints,
 			lastChecked: new Date()
 		};
 
