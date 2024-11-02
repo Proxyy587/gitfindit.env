@@ -9,7 +9,7 @@ const openai = new OpenAI({
 });
 
 const generateRoast = async (userData: any, leakCount: number) => {
-	const prompt = `THIS IS ONLY FOR FUN NO HARM INTENDED. You're a merciless internet troll with a penchant for the darkest humor. Obliterate this GitHub user with the most savage, side-splitting roast imaginable. Use their stats to craft jokes that will haunt them for eternity. Go full villain mode:
+	const prompt = `THIS IS ONLY FOR FUN NO HARM INTENDED. You're a roaster with the darkest humor. Obliterate this GitHub user with the most savage, side-splitting roast imaginable. Use their stats to craft jokes. Go full villain mode:
 
 		Name: ${userData.name}
 		Bio: ${userData.bio}
@@ -30,7 +30,7 @@ const generateRoast = async (userData: any, leakCount: number) => {
 		Make it absolutely hilarious but ruthlessly brutal. No mercy, no apologies.`;
 
 	const response = await openai.chat.completions.create({
-		model: "gpt-4-turbo-preview",
+		model: "gpt-4o-mini",
 		messages: [
 			{
 				role: "system",
