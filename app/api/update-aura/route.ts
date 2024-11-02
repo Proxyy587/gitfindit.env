@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { saveUser } from "@/actions/saveUser";
 
-export const POST = async (req: NextRequest) => {
+export const dynamic = 'force-dynamic';
+export const runtime = 'edge';
+
+export async function POST(req: NextRequest) {
 	try {
 		const { username, leakCount, auraPoints } = await req.json();
 
@@ -30,4 +33,4 @@ export const POST = async (req: NextRequest) => {
 			{ status: 500 }
 		);
 	}
-};
+}
