@@ -6,7 +6,6 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
 	try {
-		// Connect to database before querying
 		await connectToDatabase();
 
 		const recentViews = await User.find()

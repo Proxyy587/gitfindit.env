@@ -11,7 +11,6 @@ export const saveUser = async (userData: {
 	try {
 		await connectToDatabase();
 		
-		// Use findOneAndUpdate to handle both creation and updates
 		await User.findOneAndUpdate(
 			{ username: userData.username },
 			userData,

@@ -23,7 +23,6 @@ export default function RecentViews() {
 				lastChecked: new Date(view.lastChecked),
 				createdAt: new Date(view.createdAt),
 			}));
-			// Sort by createdAt in descending order (newest first)
 			const sortedViews = viewsWithDates.sort(
 				(a: RecentView, b: RecentView) =>
 					b.createdAt.getTime() - a.createdAt.getTime()
